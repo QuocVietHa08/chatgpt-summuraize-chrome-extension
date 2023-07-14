@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic DOM manipulation!</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reem+Kufi&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    
+  </head>
+  <body>
+    <div class="headerWrapper">
+      <div class="titleWrapper">
+        <p id="title-header">ChatGPT - 何でも要約！</p>
+        <div class="languageSelectWrapper">
+          <select id="select-language">
+            <option value="jp">Japanese</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+      </div>
+      <div class="summarizeButtonContainer">
+        <button id="summarize-button" class="button">要約スタート</button>
+        <div style="display: flex; gap: 10px">
+          <button
+            class="button"
+            id="retry-button"
+            style="cursor: pointer; display: none"
+          >
+          リトライ
+          </button>
+          <button
+            id="copy-button"
+            class="copy-button button"
+            style="cursor: pointer; display: none"
+          >
+            コピー
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bodyWrapper">
+      <div id="content" class="text"></div>
+      <div id="more-content-div" class="text"></div>
+      <!-- <div class="loaderContainer"> -->
+      <div id="loading" class="loader" style="display: none"></div>
+      <!-- </div> -->
+      <div class="moreButton">
+        <button id="more-content" class="button" style="display: none">
+          もっと見る
+        </button>
+      </div>
+    </div>
+    <div id="loading-extension" class="loading-all-page" style="display: none">
+      <div class="background-loading"></div>
+      <div class="loader"></div>
+    </div>
+    <div class="copyright-text">
+      <div>Copyright &#169 2023 <a class="text-link" id="relipa-link" href="https://relipasoft.com/">RELIPA CO.,</a> LTD. All Rights Reserved.</div>
+    </div>
+
+    <script src="popup.js"></script>
+    <script src="./library/pdf.min.js"></script>
+    <script src="./library/pdf.worker.min.js"></script>
+    <script src="./library/readability/Readability.js"></script>
+  </body>
+</html>
